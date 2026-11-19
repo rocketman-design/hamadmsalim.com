@@ -166,6 +166,9 @@ a:not(.btn):not(.card):focus-visible { border-radius: 4px; }
 @media (prefers-reduced-motion: reduce) { .js .card.fade .card-media img { opacity: 1; scale: 1; filter: none; transition: none; } .card h2 .go, .logo-row img { transition: none; } }
 .card-media img { width: 100%; height: 100%; object-fit: cover; object-position: var(--pos, 50% 50%); transition: transform 1.2s var(--ease); }
 .card:hover .card-media img { transform: scale(1.025); }
+/* The lead photo's subject sits dead centre, where a centred zoom hardly moves it; zoom from off-centre, a touch further, so it reads like the others */
+.card--lead .card-media img { transform-origin: 30% 62%; }
+.card--lead:hover .card-media img { transform: scale(1.036); }
 .card-body { padding: 26px 0 0; }
 .card-body .cap { margin: 0 0 10px; }
 .card h2 { font-size: clamp(24px, 2.4vw, 30px); line-height: 1.2; font-weight: 500; letter-spacing: -.02em; margin: 0; text-wrap: balance; }
