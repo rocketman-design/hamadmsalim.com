@@ -157,6 +157,16 @@ a:not(.btn):not(.card):focus-visible { border-radius: 4px; }
 .proof { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
 .proof li { display: grid; grid-template-columns: 136px 1fr; gap: 20px; font-size: 16px; line-height: 1.6; color: var(--text-2); text-wrap: pretty; }
 .proof li span { font-size: 12px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--text-3); padding-top: 3px; white-space: nowrap; }
+.voices { max-width: 860px; }
+.voice { margin: 0; padding: 34px 0; border-top: 1px solid var(--line); }
+.voice:first-child { padding-top: 4px; border-top: 0; }
+.voice blockquote { margin: 0 0 16px; font-size: 21px; line-height: 1.45; letter-spacing: -.012em; text-wrap: pretty; text-indent: -.42em; }   /* the opening mark hangs in the margin */
+.voice figcaption { font-size: 15px; line-height: 1.5; color: var(--text-3); }
+.voice figcaption b { font-weight: 500; color: var(--text); }
+.voice-dot { font-style: normal; }
+.voices-more { margin: 0; font-size: 15px; }
+.voices-more a { text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 4px; }
+.voices-more a:hover { text-decoration-color: var(--text); }
 .xp { list-style: none; margin: 0; padding: 0; max-width: 820px; }
 .xp li { display: grid; grid-template-columns: 140px 1fr; gap: 24px; padding: 18px 0; border-bottom: 1px solid var(--line); }
 .xp li:first-child { padding-top: 0; }
@@ -166,7 +176,7 @@ a:not(.btn):not(.card):focus-visible { border-radius: 4px; }
 .xp a { text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 4px; }
 .xp a:hover { text-decoration-color: var(--text); }
 @media (max-width: 1000px) { .row, .field-head { grid-template-columns: 1fr; gap: 20px; } }
-@media (max-width: 680px) { .head { padding: 64px 0 56px; } .practice { padding: 28px 0; } .proof li { grid-template-columns: 1fr; gap: 2px; } .mosaic { grid-template-columns: 1fr 1fr; gap: 10px; } .mosaic figure:first-child { grid-column: 1 / -1; } .mosaic.two figure:first-child { grid-column: auto; } .mosaic img, .mosaic.two img { height: 46vw; } .mosaic figure:first-child img { height: 80vw; } .mosaic.two figure:first-child img { height: 46vw; } .xp li { grid-template-columns: 1fr; gap: 4px; } }
+@media (max-width: 680px) { .head { padding: 64px 0 56px; } .practice { padding: 28px 0; } .voice { padding: 28px 0; } .voice blockquote { font-size: 19px; } .voice figcaption b, .voice figcaption span { display: block; } .voice-dot { display: none; } .proof li { grid-template-columns: 1fr; gap: 2px; } .mosaic { grid-template-columns: 1fr 1fr; gap: 10px; } .mosaic figure:first-child { grid-column: 1 / -1; } .mosaic.two figure:first-child { grid-column: auto; } .mosaic img, .mosaic.two img { height: 46vw; } .mosaic figure:first-child img { height: 80vw; } .mosaic.two figure:first-child img { height: 46vw; } .xp li { grid-template-columns: 1fr; gap: 4px; } }
 </style>
 </head>
 <body>
@@ -218,6 +228,16 @@ a:not(.btn):not(.card):focus-visible { border-radius: 4px; }
       <div class="practice"><h3>I design for low trust and low literacy.</h3><ul class="proof"><li><span>Retailo, 2020</span>A pictorial catalogue, sign-in in Urdu and Arabic, and support over WhatsApp, where retailers already were.</li><li><span>Savyour, 2021</span>A wallet that shows monthly and lifetime savings, in a market where cashless adoption was under 2%.</li><li><span>Careem, 2023</span>Codes over WhatsApp or SMS, a PIN for when SIM cards get recycled, and a switch for tourists.</li></ul></div>
       <div class="practice"><h3>I build the system other people build on.</h3><ul class="proof"><li><span>Savyour, 2021</span>BURAQ, a design system of more than 200 components.</li><li><span>Qureos, 2022</span>The company’s first design system, as its first designer.</li><li><span>Articos, 2026</span>A design almanac generated from production tokens, with most of the frontend shipped as my own pull requests.</li></ul></div>
       <div class="practice"><h3>I grow the people around me.</h3><ul class="proof"><li><span>Savyour, 2021</span>Hired and managed a team of five designers.</li><li><span>Careem, 2023</span>Mentored designers across a 40-person design team.</li><li><span>Disrupt, 2025</span>Set up the design function, hired and onboarded, then handed it to a Head of Design.</li></ul></div>
+    </div>
+  </section>
+
+  <section class="row fade">
+    <p class="cap">From colleagues</p>
+    <div class="voices">
+      <figure class="voice"><blockquote>“Hamad played a crucial role in redesigning our customer onboarding flow… his work notably improved our user acquisition funnel. His personable nature made him an excellent cross-functional partner, effectively bridging the gap between design, product, and engineering teams.”</blockquote><figcaption><b>Sam Rapp</b><i class="voice-dot"> · </i><span>my direct manager · former Senior Director of Design, Careem</span></figcaption></figure>
+      <figure class="voice"><blockquote>“His trust in the team’s capabilities empowered us to take on challenges with confidence… he always stood up for us, even in the face of mistakes.”</blockquote><figcaption><b>Fazila Mubashir</b><i class="voice-dot"> · </i><span>reported to me · former Senior Product Designer, Savyour</span></figcaption></figure>
+      <figure class="voice"><blockquote>“He’s an exceptionally talented researcher, bringing depth and insight to every project… I personally learned so much from his expertise and approach.”</blockquote><figcaption><b>Rafael Sepeda Errera</b><i class="voice-dot"> · </i><span>my direct manager · former Senior Manager of Design, Careem</span></figcaption></figure>
+      <p class="voices-more"><a href="https://www.linkedin.com/in/hamadmsalim/details/recommendations/" target="_blank" rel="noopener">Read all five in full on LinkedIn</a></p>
     </div>
   </section>
 
